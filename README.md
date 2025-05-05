@@ -39,8 +39,10 @@ Private Route Table ─ Private Subnet ─ EC2 (App/DB)
 
 ## Setting up Internet Gateway (IGW)
 - Internet Gateways → Create IGW, Name = `Lab-IGW`
+
 ![Successfully created IGW](./images/created_igw.png)
 - Select it → Actions → Attach to VPC → Lab-VPC
+
 ![Attached IGW to VPC](./images/attached_igw-2-vpc.png)
 
 ## Questions to Answer At The End of The Lab
