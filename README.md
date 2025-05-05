@@ -45,6 +45,26 @@ Private Route Table ─ Private Subnet ─ EC2 (App/DB)
 
 ![Attached IGW to VPC](./images/attached_igw_2_vpc.png)
 
+## Route Tables & Routes
+### Public Route Table
+- Route Tables → Create route table for `Lab-VPC`, Name = `Public-RT`
+- Select it → Subnet Associations → Edit → Add Public-Subnet
+- Under Routes, add:
+    - Destination `0.0.0.0/0` → Target `Lab-IGW`
+
+### Private Route Table + NAT Gateway
+- Allocate Elastic IP:
+    - EC2 → Network & Security → Elastic IPs → Allocate new address
+
+- Create NAT Gateway:
+    - VPC → NAT Gateways → Create NAT Gateway
+    - Subnet = `Public-Subnet`, Elastic IP = your new EIP, Name = `Lab-NAT`
+
+- Private RT:
+    - Route Tables → Create for `Lab-VPC`, Name = `Private-RT`
+    - Associate with `Private-Subnet`
+    - Add route: `0.0.0.0/0` → Target = `Lab-NAT`
+
 ## Questions to Answer At The End of The Lab
 - What is a VPC?
 - What is a CIDR block?
@@ -53,3 +73,6 @@ Private Route Table ─ Private Subnet ─ EC2 (App/DB)
 - IPv4 and IPv6 CIDR block?
 - While creating a Subnet, what is the importance of choosing an Availability Zone?
 - When choosing a Subnet's IPv4 CIDR, why must it lie within the VPC's IPv4 CIDR block?
+- What is the funtion of the IGW?
+What is Route Tables and it's function in this setup?
+- What is the essence of adding the 0.0.0.0/0 Destination Route to the Route Table?
