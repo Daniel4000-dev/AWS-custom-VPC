@@ -26,7 +26,7 @@ Private Route Table ─ Private Subnet ─ EC2 (App/DB)
     - Name: Lab-VPC
     - IPv4 CIDR: 10.0.0.0/16
     - Tenancy: Defualt
-![Successfully created VPC](./images/created_vpc.png)
+![Successfully created VPC](/images/created_vpc.png)
 
 ## Create Subnets
 - Subnets → Create subnet
