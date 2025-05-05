@@ -21,5 +21,9 @@ Public Route Table ── Public Subnet ── EC2 (Bastion/Web)
 Private Route Table ─ Private Subnet ─ EC2 (App/DB)
 ```
 
-## Creating your VPC
-- Sign into your AWS console and go to VPC
+## Creating A VPC
+- Go to VPC → Your VPCs → Create VPC
+    Name: Lab-VPC
+    IPv4 CIDR: 10.0.0.0/16
+    Tenancy: Defualt
+
