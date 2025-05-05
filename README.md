@@ -23,7 +23,7 @@ Private Route Table ─ Private Subnet ─ EC2 (App/DB)
 
 ## Creating A VPC
 - Go to VPC → Your VPCs → Create VPC
-    Name: Lab-VPC
-    IPv4 CIDR: 10.0.0.0/16
-    Tenancy: Defualt
+    - Name: Lab-VPC
+    - IPv4 CIDR: 10.0.0.0/16
+    - Tenancy: Defualt
 
